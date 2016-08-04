@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -13,9 +14,10 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+root 'cocktails#index'
 
-resources: cocktails, only: [:index, :show, :new, :create] do |variable|
-  resources: doses, only: [:new, :create, :delete]
+resources :cocktails, only: [:index, :show, :new, :create] do
+  resources :doses, only: [:new, :create, :destroy]
 end
 
 # A user can see the list of all cocktails
