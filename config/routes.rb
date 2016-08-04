@@ -14,6 +14,23 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
+resources: cocktails, only: [:index, :show, :new, :create] do |variable|
+  resources: doses, only: [:new, :create, :delete]
+end
+
+# A user can see the list of all cocktails
+# GET "cocktails"
+# A user can see the details of a given cocktail, with the ingredient list
+# GET "cocktails/42"
+# A user can create a new cocktail.
+# GET "cocktails/new"
+# POST "cocktails"
+# A user can add a new dose (ingredient/description pair) on an existing cocktail.
+# GET "cocktails/42/doses/new"
+# POST "cocktails/42/doses"
+# A user can delete a dose on an existing cocktail
+# DELETE "doses/25"
+
   # Example resource route with options:
   #   resources :products do
   #     member do
