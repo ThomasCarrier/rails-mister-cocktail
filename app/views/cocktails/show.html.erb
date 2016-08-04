@@ -3,8 +3,10 @@
 <p>Secret Recipe:</p>
 <% @cocktail.doses.each do |d| %>
   <li>
-    <%=  d.description %> <%=  d.ingredient.name%>
+    <%=  d.description %> of <%=  d.ingredient.name%>
     <%= link_to "Delete", cocktail_dose_path(@cocktail, d), method: :delete %>
   </li>
   <% end %>
+<%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
+<hr>
 <%= link_to "List of Cocktails", cocktails_path %>
