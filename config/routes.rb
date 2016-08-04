@@ -20,7 +20,7 @@ resources :cocktails, only: [:index, :show, :new, :create] do
   resources :doses, only: [:new, :create]
 end
 
-delete 'doses/:id' => "doses#destroy"
+delete 'doses/:id' => "doses#destroy", as: :doses
 
 # A user can see the list of all cocktails
 # GET "cocktails"

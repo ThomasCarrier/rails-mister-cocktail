@@ -1,9 +1,9 @@
 <h1>Add a new dose</h1>
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
-
 <%= f.error_notification %>
 <%= f.input :description %>
-<%= f.input :ingredient_id, collection: [1,2,3], prompt: "Ingredient"  %>
+<%= f.collection_select(:ingredient_id, @ingredients, :id, :name) %>
+<hr>
 <%= f.button :submit %>
 <% end %>
