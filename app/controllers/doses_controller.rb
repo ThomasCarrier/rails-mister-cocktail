@@ -3,6 +3,7 @@ class DosesController < ApplicationController
     @cocktail= Cocktail.find(params[:cocktail_id])
     @dose= Dose.new
     @ingredients = Ingredient.all
+    10.times { @cocktail.doses.new }
   end
 
   def create
