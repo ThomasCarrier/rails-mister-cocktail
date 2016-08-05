@@ -1,3 +1,79 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  /*background-color: rgb(230,230,230);*/
+  background-image: url('images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(150,150,150);
+  font-size: 15px;
+  line-height: 20px;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(100,100,100);
+  font-size: 30px;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(120,120,120);
+  font-size: 17px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(100,100,100);
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(150,150,150);
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto;
+  background-image: url("background-red-warm.jpg");
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border: 30px;
+  margin: 40px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.list-inline {
+  padding-left: 0px;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+.column-2 {
+text-align: left;
+padding-left: 20px;
+}
+
+
+img {
+  width: 250px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+}

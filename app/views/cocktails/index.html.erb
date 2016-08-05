@@ -3,9 +3,15 @@
     <h1>Cocktails</h1>
 
     <% @cocktails.each do |c| %>
-    <h3><%= link_to "#{c.name}", cocktail_path(c) %></h3>
-    <p><%= link_to "Effacer", cocktail_path(c), method: :delete %></p>
+    <li>
+      <h3><%= link_to "#{c.name}", cocktail_path(c) %></h3>
+      <% if c.photo? %>
+      <%= cl_image_tag c.photo.path, width: 10, height: 10, crop: :pad %>
+      <% end %>
+      <%= link_to "Put aside", cocktail_path(c), method: :delete %>
+    </li>
     <% end %>
+    <hr>
     <p><%= link_to "Add a cocktail", new_cocktail_path %></p>
   </div>
 </div>

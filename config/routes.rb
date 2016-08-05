@@ -19,10 +19,8 @@ Rails.application.routes.draw do
 root 'cocktails#index'
 
 resources :cocktails, only: [:index, :show, :new, :create, :destroy] do
-  resources :doses, only: [:new, :create]
+  resources :doses, only: [:new, :create, :destroy]
 end
-
-delete 'doses/:id' => "doses#destroy", as: :doses
 mount Attachinary::Engine => "/attachinary"
 
 # A user can see the list of all cocktails

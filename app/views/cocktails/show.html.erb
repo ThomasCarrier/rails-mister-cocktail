@@ -1,14 +1,15 @@
 <div class="row">
-  <div class="text-center">
+  <div class="card text-center">
     <h1><%= @cocktail.name %></h1>
     <% if @cocktail.photo? %>
-      <%= cl_image_tag @cocktail.photo.path, width: 200, height: 300, crop: :fill %>
+      <%= cl_image_tag @cocktail.photo.path, width: 400, height: 300, crop: :fill %>
       <% end %>
+      <hr>
     <p>Secret Recipe:</p>
     <% @cocktail.doses.each do |d| %>
     <li>
       <%=  d.description %> of <%=  d.ingredient.name%>
-      <%= link_to "Delete", doses_path(d), method: :delete %>
+      <%= link_to "Delete", cocktail_dose_path(@cocktail, d), method: :delete %>
     </li>
     <% end %>
     <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
