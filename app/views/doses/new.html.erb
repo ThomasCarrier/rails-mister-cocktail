@@ -1,9 +1,15 @@
-<h1>Add a new dose</h1>
+<div class="row">
+  <div class="card text-center">
 
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-<%= f.error_notification %>
-<%= f.input :description %>
-<%= f.select :ingredient_id, options_from_collection_for_select(Ingredient.all, :id, :name) %>
-<hr>
-<%= f.button :submit %>
-<% end %>
+    <h1>Add a new dose</h1>
+
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :description %>
+    <%= f.select :ingredient_id, options_from_collection_for_select(Ingredient.all, :id, :name) %>
+    <hr>
+    <%= f.button :submit %>
+    <% end %>
+  </div>
+
+</div>
