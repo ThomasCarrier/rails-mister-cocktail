@@ -60,3 +60,4 @@ gem 'figaro'
 gem "cloudinary"
 gem "attachinary"
 gem "jquery-fileupload-rails"
+gem 'responders', '~> 2.0'
