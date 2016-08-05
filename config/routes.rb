@@ -14,13 +14,16 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+
+
 root 'cocktails#index'
 
-resources :cocktails, only: [:index, :show, :new, :create] do
+resources :cocktails, only: [:index, :show, :new, :create, :destroy] do
   resources :doses, only: [:new, :create]
 end
 
 delete 'doses/:id' => "doses#destroy", as: :doses
+mount Attachinary::Engine => "/attachinary"
 
 # A user can see the list of all cocktails
 # GET "cocktails"

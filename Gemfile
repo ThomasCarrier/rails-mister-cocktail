@@ -57,3 +57,6 @@ gem 'rails_12factor', group: :production
 gem 'puma',           group: :production
 
 gem 'figaro'
+gem "cloudinary"
+gem "attachinary"
+gem "jquery-fileupload-rails"
