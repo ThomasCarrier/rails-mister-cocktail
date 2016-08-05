@@ -5,7 +5,7 @@
 
 body {
   /*background-color: rgb(230,230,230);*/
-  background-image: url('images/background.jpg');
+  background-image: image-url(image-path('background.jpg'));
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
@@ -40,7 +40,7 @@ a:hover {
 .container {
   width: 700px;
   margin: 0 auto;
-  background-image: url("background-red-warm.jpg");
+  background-image: image-url(image-path("background-red-warm.jpg"));
 }
 
 .card {
